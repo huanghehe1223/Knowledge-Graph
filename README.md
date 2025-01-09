@@ -115,5 +115,5 @@ MIT License
 
 ## 联系方式
 如有问题或建议，请通过以下方式联系：
-- Email: xxx@xxx.com
+- Email: upchh1223@gmail.com
 - GitHub Issues
