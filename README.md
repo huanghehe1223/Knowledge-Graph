@@ -1,26 +1,119 @@
-# Simple Vue
+# 物理学家知识图谱系统
 
-Vue.js landing page template designed by Cruip.
+基于Vue 3 + FastAPI + Neo4j的物理学家知识图谱可视化与实体关系提取系统。
 
-## Project setup
+## 系统功能
+
+### 1. 知识图谱可视化
+- 展示物理学家之间的关联网络
+- 支持节点拖拽和缩放操作
+- 点击节点查看详细信息
+- 支持关键词搜索定位
+- 支持图谱重置与刷新
+- 提供热门搜索关键词快速访问
+
+### 2. 实体关系提取
+- 自动识别文本中的实体信息
+- 提取实体之间的关系
+- 支持多种实体类型识别：
+  - 物理学家
+  - 领域
+  - 奖项
+  - 国家
+  - 科研成果
+  - 机构
+  - 学校
+- 实时展示提取结果
+- 提供示例文本快速体验
+
+## 技术架构
+
+### 前端技术栈
+- Vue 3 - 响应式前端框架
+- Vite - 现代前端构建工具
+- TailwindCSS - 原子化CSS框架
+- Element Plus - UI组件库
+- Neovis.js - 图数据可视化库
+
+### 后端技术栈
+- FastAPI - 高性能Python Web框架
+- Neo4j - 图数据库
+- SpaCy - 自然语言处理库
+- Python - 后端开发语言
+
+## 项目结构
 ```
+src/
+├── pages/           # 页面组件
+│   ├── Home.vue     # 首页
+│   ├── Customers.vue # 知识图谱展示页
+│   └── Support.vue   # 实体关系提取页
+├── partials/        # 功能组件
+│   ├── WallOfLove.vue    # 知识图谱组件
+│   ├── TextArea.vue      # 文本输入组件
+│   └── Faqs02.vue        # 实体关系展示组件
+└── ...
+```
+
+## 快速开始
+
+### 环境要求
+- Node.js >= 16
+- Python >= 3.8
+- Neo4j >= 4.4
+
+### 前端部署
+```bash
+# 安装依赖
 npm install
-```
 
-### Compiles and hot-reloads for development
-```
+# 开发环境运行
 npm run dev
-```
 
-### Compiles and minifies for production
-```
+# 生产环境构建
 npm run build
 ```
 
-### Customize configuration
-See [Configuration Reference](https://vitejs.dev/guide/).
+### 后端部署
+```bash
+# 安装Python依赖
+pip install -r requirements.txt
 
-## Support notes
-We are shipping our templates with a very basic Vue.js configuration to let you quickly get into the development process, but we don't discourage you from using any other configuration or framework built on the top of Vue. So, please note that any request dealing with Vue (e.g. extra features, customisations, et cetera) is to be considered out of the support scope.
+# 启动FastAPI服务
+uvicorn main:app --reload
+```
 
-For more information about what support covers, please see our (FAQs)[https://cruip.com/faq/].
+### Neo4j配置
+1. 安装Neo4j数据库
+2. 创建新的数据库实例
+3. 修改配置文件中的数据库连接信息
+
+## 使用说明
+
+### 知识图谱浏览
+1. 进入知识图谱展示页面
+2. 可以通过拖拽、缩放来探索图谱
+3. 点击节点查看详细信息
+4. 使用搜索框或热门关键词快速定位
+
+### 实体关系提取
+1. 进入实体关系提取页面
+2. 输入或使用示例文本
+3. 点击"实体关系提取"按钮
+4. 查看提取结果
+
+## 注意事项
+- 文本输入建议不要过长，推荐300-500字
+- 图谱展示默认显示100个节点，可根据需要调整
+- 建议使用现代浏览器访问以获得最佳体验
+
+## 贡献指南
+欢迎提交Issue和Pull Request来帮助改进项目。
+
+## 许可证
+MIT License
+
+## 联系方式
+如有问题或建议，请通过以下方式联系：
+- Email: xxx@xxx.com
+- GitHub Issues
